@@ -1,0 +1,12 @@
+# requirements.txt - Python packages to include
+ncclient
+paramiko
+pykerberos
+pyOpenSSL
+pypsrp[kerberos,credssp]
+pywinrm[kerberos,credssp]
+toml
+pexpect
+python-daemon
+pyyaml
+six
