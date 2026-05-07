@@ -1,12 +1,5 @@
-# requirements.txt - Python packages to include
-ncclient
-paramiko
-pykerberos
-pyOpenSSL
-pypsrp[kerberos,credssp]
-pywinrm[kerberos,credssp]
-toml
-pexpect
-python-daemon
-pyyaml
-six
+# Python dependencies for AAP 2.5 EE
+# Required by ansible.controller and infra.aap_configuration collections
+awxkit>=24.0.0
+requests>=2.28.0
+urllib3>=1.26.0

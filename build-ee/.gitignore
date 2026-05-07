@@ -1,0 +1,8 @@
+# Segredos — NUNCA versionar
+.env
+*.token
+*_token.txt
+ansible.cfg
+
+# Artefatos do build
+context/
