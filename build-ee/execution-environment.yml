@@ -1,25 +1,21 @@
 ---
 version: 3
- 
+
+options:
+  package_manager_path: /usr/bin/microdnf
+
 images:
   base_image:
     name: "registry.redhat.io/ansible-automation-platform-25/ee-minimal-rhel9:latest"
-    signature_original_name: "registry.redhat.io/ansible-automation-platform-25/ee-minimal-rhel9:latest"
- 
+
 dependencies:
   galaxy: requirements.yml
-  python: requirements.txt
   system: bindep.txt
- 
+
 additional_build_files:
-  - src: ansible.cfg
-    dest: configs/ansible.cfg
- 
+  - src: ./ansible.cfg
+    dest: configs
+
 additional_build_steps:
-  prepend_galaxy:
-    - ENV ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_AUTH_URL=https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
-    - ENV ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_URL=https://cloud.redhat.com/api/automation-hub/
-    - ENV ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=--pre
- 
-  prepend_final:
-    - RUN microdnf install -y python3-pip && microdnf clean all
+  prepend_base:
+    - COPY _build/configs/ansible.cfg /etc/ansible/ansible.cfg
