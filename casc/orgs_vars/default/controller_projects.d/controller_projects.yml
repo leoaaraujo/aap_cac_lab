@@ -1,0 +1,15 @@
+---
+controller_projects:
+  - name: "CasC_Data"
+    description: "Project to include Casc_Data"
+    organization: "Default"
+    scm_type: git
+    scm_credential: "Default Gitlab Credential"      
+    scm_url: "git@github.com:leoaaraujo/aap_cac_lab.git"
+    scm_branch: "{{ casc_gitlab_scm_branch | default('main') }}"
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: true
+    scm_update_cache_timeout: 86400
+    allow_override: true
+...
