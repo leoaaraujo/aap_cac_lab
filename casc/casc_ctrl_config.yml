@@ -12,7 +12,7 @@
       block:
         - name: "Get the Authentication Token for the future requests"
           ansible.builtin.uri:
-            url: "https://{{ aap_hostname }}/api/v2/tokens/"
+            url: "https://{{ aap_hostname }}/api/controller/v2/tokens/"
             user: "{{ aap_username }}"
             password: "{{ aap_password }}"
             method: POST
