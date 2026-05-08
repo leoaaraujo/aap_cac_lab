@@ -1,0 +1,6 @@
+---
+controller_inventories:
+  - name: "Customer A Localhost"
+    description: "Inventory for the Localhost"
+    organization: "Customer A"
+...

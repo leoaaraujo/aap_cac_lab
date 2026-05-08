@@ -1,0 +1,4 @@
+---
+controller_organizations:
+  - name: "Customer B"
+    description: "Organization managed as code"

@@ -1,0 +1,6 @@
+---
+controller_teams:
+  - name: "Customer B Operators"
+    organization: "Customer B"
+    description: "Operators team for Customer B"
+...    
