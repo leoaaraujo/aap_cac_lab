@@ -58,4 +58,58 @@ filetree_controller_workflow_job_templates: "{{ dir_orgs_vars }}/{{ orgs }}/cont
 #filetree_hub_ee_registries: "{{ dir_orgs_vars }}/{{ orgs }}/hub_ee_registries.d/"
 #filetree_hub_ee_repositories: "{{ dir_orgs_vars }}/{{ orgs }}/hub_ee_repositories.d/"
 #filetree_hub_ee_images: "{{ dir_orgs_vars }}/{{ orgs }}/hub_ee_images.d/"
----
+
+controller_configuration_filetree_read_tasks:
+  # Gateway tasks
+#  - {name: gateway_authenticators, var: gateway_authenticators, tags: authenticators}
+#  - {name: gateway_authenticator_maps, var: gateway_authenticator_maps, tags: authenticator_maps}
+#  - {name: gateway_settings, var: gateway_settings, tags: settings}
+  - {name: gateway_organizations, var: aap_organizations, tags: organizations}
+#  - {name: gateway_applications, var: aap_applications, tags: applications}
+#  - {name: gateway_http_ports, var: gateway_http_ports, tags: http_ports}
+#  - {name: gateway_service_clusters, var: gateway_service_clusters, tags: service_clusters}
+#  - {name: gateway_service_keys, var: gateway_service_keys, tags: service_keys}
+#  - {name: gateway_service_nodes, var: gateway_service_nodes, tags: service_nodes}
+#  - {name: gateway_services, var: gateway_services, tags: services}
+  - {name: gateway_teams, var: aap_teams, tags: teams}
+#  - {name: gateway_users, var: aap_user_accounts, tags: users}
+#  - {name: gateway_role_definitions, var: gateway_role_definitions, tags: role_definitions}
+#  - {name: gateway_role_team_assignments, var: gateway_role_team_assignments, tags: role_team_assignments}
+#  - {name: gateway_role_user_assignments, var: gateway_role_user_assignments, tags: role_user_assignments}
+#  - {name: gateway_routes, var: gateway_routes, tags: routes}
+
+  # Controller tasks
+#  - {name: controller_settings, var: controller_settings, tags: settings}
+#  - {name: controller_labels, var: controller_labels, tags: labels}
+#  - {name: controller_credential_types, var: controller_credential_types, tags: credential_types}
+#  - {name: controller_credential_input_sources, var: controller_credential_input_sources, tags: credential_input_sources}
+  - {name: controller_credentials, var: controller_credentials, tags: credentials}
+#  - {name: controller_notification_templates, var: controller_notifications, tags: notification_templates}
+  - {name: controller_projects, var: controller_projects, tags: ['projects', 'inventories']}
+#  - {name: controller_execution_environments, var: controller_execution_environments, tags: execution_environments}
+  - {name: controller_inventories, var: controller_inventories, tags: inventories}
+#  - {name: controller_inventory_sources, var: controller_inventory_sources, tags: ['inventory_sources', 'inventories']}
+#  - {name: controller_instance_groups, var: controller_instance_groups, tags: instance_groups}
+  - {name: controller_hosts, var: controller_hosts, tags: ['hosts', 'inventories']}
+#  - {name: controller_host_groups, var: controller_groups, tags: ['inventories', 'host_groups']}
+  - {name: controller_job_templates, var: controller_templates, tags: job_templates}
+  - {name: controller_workflow_job_templates, var: controller_workflows, tags: workflow_job_templates}
+#  - {name: controller_schedules, var: controller_schedules, tags: schedules}
+#  - {name: controller_roles, var: controller_roles, tags: roles}
+#
+  # EDA tasks
+#  - {name: eda_credential_types, var: eda_credential_types, tags: eda_credential_types}
+#  - {name: eda_credentials, var: eda_credentials, tags: eda_credentials}
+#  - {name: eda_decision_environments, var: eda_decision_environments, tags: eda_decision_environments}
+#  - {name: eda_event_streams, var: eda_event_streams, tags: eda_event_streams}
+#  - {name: eda_projects, var: eda_projects, tags: eda_projects}
+#  - {name: eda_rulebook_activations, var: eda_rulebook_activations, tags: eda_rulebook_activations}
+
+  # Hub tasks
+#  - {name: hub_namespaces, var: hub_namespaces, tags: hub_namespaces}
+#  - {name: hub_collections, var: hub_collections, tags: hub_collections}
+#  - {name: hub_collection_remotes, var: hub_collection_remotes, tags: hub_collection_remotes}
+#  - {name: hub_collection_repositories, var: hub_collection_repositories, tags: hub_collection_repositories}
+#  - {name: hub_ee_registries, var: hub_ee_registries, tags: hub_ee_registries}
+#  - {name: hub_ee_repositories, var: hub_ee_repositories, tags: hub_ee_repositories}
+#  - {name: hub_ee_images, var: hub_ee_images, tags: hub_ee_images}
