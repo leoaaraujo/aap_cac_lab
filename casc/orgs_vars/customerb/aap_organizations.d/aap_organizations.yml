@@ -1,4 +1,4 @@
 ---
-controller_organizations:
+aap_organizations:
   - name: "Customer B"
     description: "Organization managed as code"

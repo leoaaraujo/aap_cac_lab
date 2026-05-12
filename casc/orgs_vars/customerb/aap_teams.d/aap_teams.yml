@@ -1,5 +1,5 @@
 ---
-controller_teams:
+aap_teams:
   - name: "Customer B Operators"
     organization: "Customer B"
     description: "Operators team for Customer B"
