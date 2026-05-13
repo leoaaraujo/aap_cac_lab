@@ -16,7 +16,9 @@
         state: present
         aap_hostname: "{{ aap_hostname }}"
         aap_username: "{{ aap_username }}"
-        aap_password: "{{ aap_password }}"  
+        aap_password: "{{ aap_password }}"
+        aap_validate_certs: "{{ aap_validate_certs }}"
+      register: aap_token
 
   roles:
     - infra.aap_configuration_extended.filetree_read
@@ -28,4 +30,4 @@
         existing_token: "{{ aap_token }}"
         state: absent
       when: aap_token is defined
-...
+
