@@ -10,10 +10,7 @@
     aap_validate_certs: "{{ vault_aap_validate_certs | default(lookup('env', 'CONTROLLER_VERIFY_SSL')) }}"
 
     # Configuration
-    organization_filter: "{{ orgs }}"
     flatten_output: true
-    output_path: "{{ output_path | default('orgs_vars/' ~ orgs) }}"
-    secrets_as_variables: true
 
   pre_tasks:
     - name: "Setup authentication (block)"
