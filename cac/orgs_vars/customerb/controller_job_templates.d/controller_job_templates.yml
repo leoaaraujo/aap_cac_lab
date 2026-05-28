@@ -5,7 +5,7 @@ controller_templates:
     organization: "{{ orgs }}"
     project: "{{ orgs }} CaC_Data"
     inventory: "{{ orgs }} Localhost"
-    playbook: "cac_ctrl_config.yml"
+    playbook: "cac/cac_ctrl_config.yml"
     job_type: run
     fact_caching_enabled: false
     credentials:
