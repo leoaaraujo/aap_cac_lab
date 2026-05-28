@@ -17,7 +17,7 @@ filetree_aap_organizations: "{{ dir_orgs_vars }}/{{ orgs }}/aap_organizations.d/
 #filetree_gateway_service_keys: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_service_keys.d/"
 #filetree_gateway_service_nodes: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_service_nodes.d/"
 #filetree_gateway_services: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_services.d/"
-#filetree_aap_teams: "{{ dir_orgs_vars }}/{{ orgs }}/aap_teams.d/"
+filetree_aap_teams: "{{ dir_orgs_vars }}/{{ orgs }}/aap_teams.d/"
 #filetree_aap_user_accounts: "{{ dir_orgs_vars }}/{{ orgs }}/aap_users.d/"
 #filetree_gateway_role_definitions: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_role_definitions.d/"
 #filetree_gateway_role_team_assignments: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_role_team_assignments.d/"
@@ -72,7 +72,7 @@ controller_configuration_filetree_read_tasks:
 #  - {name: gateway_service_keys, var: gateway_service_keys, tags: service_keys}
 #  - {name: gateway_service_nodes, var: gateway_service_nodes, tags: service_nodes}
 #  - {name: gateway_services, var: gateway_services, tags: services}
-#  - {name: gateway_teams, var: aap_teams, tags: teams}
+  - {name: gateway_teams, var: aap_teams, tags: teams}
 #  - {name: gateway_users, var: aap_user_accounts, tags: users}
 #  - {name: gateway_role_definitions, var: gateway_role_definitions, tags: role_definitions}
 #  - {name: gateway_role_team_assignments, var: gateway_role_team_assignments, tags: role_team_assignments}
