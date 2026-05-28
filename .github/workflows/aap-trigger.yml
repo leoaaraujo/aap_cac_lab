@@ -3,7 +3,7 @@ name: Dynamic AAP Job Template Trigger
 on:
   push:
     branches:
-      - main
+      - aap-cac-demo
     paths:
       - 'orgs_vars/**'
 
