@@ -61,7 +61,7 @@ jobs:
 
             TEMPLATE_ID=$(curl -k -s \
               -H "Authorization: Bearer ${AAP_TOKEN}" \
-              -H "Accept: application/json" \                                       
+              -H "Accept: application/json" \
               "$TEMPLATE_SEARCH_URL" | jq -r '.results[0].id // empty')
 
             if [ -z "$TEMPLATE_ID" ]; then
@@ -73,7 +73,7 @@ jobs:
 
             RESPONSE=$(curl -k -s -X POST \
               -H "Content-Type: application/json" \
-              -H "Accept: application/json"                                   
+              -H "Accept: application/json" \
               -H "Authorization: Bearer ${AAP_TOKEN}" \
               "${AAP_URL}/api/controller/v2/job_templates/${TEMPLATE_ID}/launch/")
 
