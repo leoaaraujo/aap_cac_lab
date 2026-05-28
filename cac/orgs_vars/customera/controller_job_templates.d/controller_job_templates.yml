@@ -1,9 +1,9 @@
 ---
 controller_templates:
-  - name: "{{ orgs }} JT_CasC_Ctrl_Config"
+  - name: "{{ orgs }} JT_CaC_Ctrl_Config"
     description: "Template to deploy Controller objects in Org"
     organization: "{{ orgs }}"
-    project: "{{ orgs }} CasC_Data"
+    project: "{{ orgs }} CaC_Data"
     inventory: "{{ orgs }} Localhost"
     playbook: "cac_ctrl_config.yml"
     job_type: run

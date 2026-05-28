@@ -1,7 +1,7 @@
 ---
 controller_projects:
-  - name: "{{ orgs }} CasC_Data"
-    description: "Project to include Casc_Data"
+  - name: "{{ orgs }} CaC_Data"
+    description: "Project to include Cac_Data"
     organization: "{{ orgs }}"
     scm_type: git
     scm_credential: "{{ orgs }} GH Credential"      
