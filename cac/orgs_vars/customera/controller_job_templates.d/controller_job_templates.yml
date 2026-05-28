@@ -21,5 +21,6 @@ controller_templates:
       ansible_async_dir: /home/runner/.ansible_async/
       # Orgs managed as code
       orgs: "{{ orgs }}"
+      dir_orgs_vars: orgs_vars  
     execution_environment: "ee-casc"
 ...
