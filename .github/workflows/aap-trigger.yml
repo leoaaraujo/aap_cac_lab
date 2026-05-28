@@ -55,12 +55,13 @@ jobs:
             JT_NAME="${ORG} JT_CasC_Ctrl_Config"
             JT_NAME_ENCODED=$(printf '%s' "$JT_NAME" | jq -sRr @uri)
 
-            TEMPLATE_SEARCH_URL="${AAP_URL}/api/v2/job_templates/?name=${JT_NAME_ENCODED}"
+            TEMPLATE_SEARCH_URL="${AAP_URL}/api/controller/v2/job_templates/?name=${JT_NAME_ENCODED}"
 
             echo "Searching Job Template: $JT_NAME"
 
             TEMPLATE_ID=$(curl -k -s \
               -H "Authorization: Bearer ${AAP_TOKEN}" \
+              -H "Accept: application/json" \                                       
               "$TEMPLATE_SEARCH_URL" | jq -r '.results[0].id // empty')
 
             if [ -z "$TEMPLATE_ID" ]; then
@@ -72,8 +73,9 @@ jobs:
 
             RESPONSE=$(curl -k -s -X POST \
               -H "Content-Type: application/json" \
+              -H "Accept: application/json"                                   
               -H "Authorization: Bearer ${AAP_TOKEN}" \
-              "${AAP_URL}/api/v2/job_templates/${TEMPLATE_ID}/launch/")
+              "${AAP_URL}/api/controller/v2/job_templates/${TEMPLATE_ID}/launch/")
 
             echo "AAP launch response:"
             echo "$RESPONSE"
