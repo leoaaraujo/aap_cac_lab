@@ -52,7 +52,7 @@ jobs:
             echo "Processing organization: $ORG"
             echo "----------------------------------------"
 
-            JT_NAME="${ORG} JT_CasC_Ctrl_Config"
+            JT_NAME="${ORG} JT_CaC_Ctrl_Config"
             JT_NAME_ENCODED=$(printf '%s' "$JT_NAME" | jq -sRr @uri)
 
             TEMPLATE_SEARCH_URL="${AAP_URL}/api/controller/v2/job_templates/?name=${JT_NAME_ENCODED}"
