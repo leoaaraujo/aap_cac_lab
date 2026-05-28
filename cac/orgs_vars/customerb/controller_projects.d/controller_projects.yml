@@ -1,12 +1,12 @@
 ---
 controller_projects:
-  - name: "Customer B CasC_Data"
+  - name: "{{ orgs }} CasC_Data"
     description: "Project to include Casc_Data"
-    organization: "Customer B"
+    organization: "{{ orgs }}"
     scm_type: git
-    scm_credential: "Customer B GH Credential"      
+    scm_credential: "{{ orgs }} GH Credential"      
     scm_url: "https://github.com/leoaaraujo/aap_cac_lab.git"
-    scm_branch: "{{ casc_gitlab_scm_branch | default('main') }}"
+    scm_branch: "{{ cac_gitlab_scm_branch | default('main') }}"
     scm_clean: false
     scm_delete_on_update: false
     scm_update_on_launch: true

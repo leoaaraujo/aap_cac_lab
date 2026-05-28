@@ -1,0 +1,20 @@
+---
+controller_projects:
+  - name: "Customer A CasC_Data"
+    description: |-
+      {%- raw -%}
+      Project to include Casc_Data
+      {%- endraw -%}
+    organization: "Customer A"
+    scm_type: "git"
+    scm_url: "https://github.com/leoaaraujo/aap_cac_lab.git"
+    scm_branch: "main"
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: true
+    scm_update_cache_timeout: "86400"
+    scm_refspec: ""
+    allow_override: true
+    update_project: false
+    timeout: "0"
+...

@@ -1,6 +1,6 @@
 ---
 aap_teams:
-  - name: "Customer A Admins"
-    organization: "Customer A"
+  - name: "{{ orgs }} Admins"
+    organization: "{{ orgs }}"
     description: "Administrators team for Customer A"
 ...    

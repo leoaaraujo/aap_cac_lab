@@ -1,6 +1,6 @@
 ---
 aap_teams:
-  - name: "Customer B Operators"
-    organization: "Customer B"
+  - name: "{{ orgs }} Operators"
+    organization: "{{ orgs }}"
     description: "Operators team for Customer B"
 ...    

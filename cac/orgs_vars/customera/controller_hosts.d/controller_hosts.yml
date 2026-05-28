@@ -2,5 +2,5 @@
 controller_hosts:
   - name: localhost
     description: localhost
-    inventory: "Customer A Localhost"
+    inventory: "{{ orgs }} Localhost"
 ...

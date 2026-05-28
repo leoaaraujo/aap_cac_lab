@@ -3,6 +3,7 @@
 
 # Organization and Environment Variables
 #env: dev
+
 controller_configuration_filetree_read_secure_logging: "{{ controller_configuration_secure_logging | default(true) }}"
 
 # Gateway Directory Paths
@@ -16,7 +17,7 @@ filetree_aap_organizations: "{{ dir_orgs_vars }}/{{ orgs }}/aap_organizations.d/
 #filetree_gateway_service_keys: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_service_keys.d/"
 #filetree_gateway_service_nodes: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_service_nodes.d/"
 #filetree_gateway_services: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_services.d/"
-filetree_aap_teams: "{{ dir_orgs_vars }}/{{ orgs }}/aap_teams.d/"
+#filetree_aap_teams: "{{ dir_orgs_vars }}/{{ orgs }}/aap_teams.d/"
 #filetree_aap_user_accounts: "{{ dir_orgs_vars }}/{{ orgs }}/aap_users.d/"
 #filetree_gateway_role_definitions: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_role_definitions.d/"
 #filetree_gateway_role_team_assignments: "{{ dir_orgs_vars }}/{{ orgs }}/gateway_role_team_assignments.d/"
@@ -38,7 +39,7 @@ filetree_controller_inventories: "{{ dir_orgs_vars }}/{{ orgs }}/controller_inve
 filetree_controller_hosts: "{{ dir_orgs_vars }}/{{ orgs }}/controller_hosts.d/"
 #filetree_controller_groups: "{{ dir_orgs_vars }}/{{ orgs }}/controller_groups.d/"
 filetree_controller_templates: "{{ dir_orgs_vars }}/{{ orgs }}/controller_job_templates.d/"
-filetree_controller_workflow_job_templates: "{{ dir_orgs_vars }}/{{ orgs }}/controller_workflow_job_templates.d/"
+#filetree_controller_workflow_job_templates: "{{ dir_orgs_vars }}/{{ orgs }}/controller_workflow_job_templates.d/"
 #filetree_controller_schedules: "{{ dir_orgs_vars }}/{{ orgs }}/controller_schedules.d/"
 #filetree_controller_roles: "{{ dir_orgs_vars }}/{{ orgs }}/controller_roles.d/"
 
@@ -71,7 +72,7 @@ controller_configuration_filetree_read_tasks:
 #  - {name: gateway_service_keys, var: gateway_service_keys, tags: service_keys}
 #  - {name: gateway_service_nodes, var: gateway_service_nodes, tags: service_nodes}
 #  - {name: gateway_services, var: gateway_services, tags: services}
-  - {name: gateway_teams, var: aap_teams, tags: teams}
+#  - {name: gateway_teams, var: aap_teams, tags: teams}
 #  - {name: gateway_users, var: aap_user_accounts, tags: users}
 #  - {name: gateway_role_definitions, var: gateway_role_definitions, tags: role_definitions}
 #  - {name: gateway_role_team_assignments, var: gateway_role_team_assignments, tags: role_team_assignments}
@@ -93,7 +94,7 @@ controller_configuration_filetree_read_tasks:
   - {name: controller_hosts, var: controller_hosts, tags: ['hosts', 'inventories']}
 #  - {name: controller_host_groups, var: controller_groups, tags: ['inventories', 'host_groups']}
   - {name: controller_job_templates, var: controller_templates, tags: job_templates}
-  - {name: controller_workflow_job_templates, var: controller_workflows, tags: workflow_job_templates}
+#  - {name: controller_workflow_job_templates, var: controller_workflows, tags: workflow_job_templates}
 #  - {name: controller_schedules, var: controller_schedules, tags: schedules}
 #  - {name: controller_roles, var: controller_roles, tags: roles}
 #

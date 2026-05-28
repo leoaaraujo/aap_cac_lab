@@ -1,4 +1,4 @@
 ---
 aap_organizations:
-  - name: "Customer A"
+  - name: "{{ orgs }}"
     description: "Organization managed as code"
