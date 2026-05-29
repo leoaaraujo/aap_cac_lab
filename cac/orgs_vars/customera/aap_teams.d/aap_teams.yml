@@ -12,7 +12,7 @@ aap_teams:
     organization: "{{ orgs }}"
     description: "DevSecOps team for Customer A"
 
-  - name: "{{ orgs }} Database"
+  - name: "{{ orgs }} DBA"
     organization: "{{ orgs }}"
-    description: "Database team for Customer A"
+    description: "DBA team for Customer A"
 ...
