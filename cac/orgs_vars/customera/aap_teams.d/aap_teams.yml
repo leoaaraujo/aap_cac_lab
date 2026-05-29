@@ -15,4 +15,9 @@ aap_teams:
   - name: "{{ orgs }} DBA"
     organization: "{{ orgs }}"
     description: "DBA team for Customer A"
+
+
+  - name: "{{ orgs }} Windows"
+    organization: "{{ orgs }}"
+    description: "Windows team for Customer A"
 ...
